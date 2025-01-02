@@ -16,3 +16,11 @@
 ├── /tests                   # Unit tests and integration tests
 ├── /logs                    # Log files (if not using stdout or stderr)
 └── /docs   
+
+
+### Generate C++ and gRPC Code from Proto File
+
+To generate C++ code and gRPC service code from a `.proto` file, use the following command:
+
+```bash
+protoc --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=$(which grpc_cpp_plugin) account.proto

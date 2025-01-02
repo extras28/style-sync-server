@@ -38,6 +38,8 @@ target_include_directories(StyleSyncServer PRIVATE
     /usr/include/mysql
 )
 
+# Set custom prefix path for finding dependencies
+set(CMAKE_PREFIX_PATH "/home/dungna31/.local")
 
 # Find and link Protobuf and gRPC
 find_package(Protobuf REQUIRED)
