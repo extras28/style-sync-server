@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service AccountService {
+    rpc GetAllAccount(Request) returns (GetAllAccountResponse);
+}
+
+message Request {}
+
+message GetAllAccountResponse {
+    repeated AccountDetail accounts = 1; // List of accounts
+}
+
+message AccountDetail {
+    string id = 1;
+    string username = 2;
+    string fullname = 3;
+    string email = 4;
+    string phone = 5;
+    string avatar = 6;
+}
